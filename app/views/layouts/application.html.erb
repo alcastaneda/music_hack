@@ -5,6 +5,21 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>
+  <script>
+	  // initialize client with app credentials
+	  SC.initialize({
+	    client_id: 'YOUR_CLIENT_ID',
+	    redirect_uri: 'http://chordinate.herokuapp.com/'
+	  });
+
+	  // initiate auth popup
+	  SC.connect(function() {
+	    SC.get('/me', function(me) {
+	      alert('Hello, ' + me.username);
+	    });
+	  });
+  </script>
 </head>
 <body>
 
