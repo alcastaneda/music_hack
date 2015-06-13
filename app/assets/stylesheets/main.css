@@ -1,0 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Eczar|Montserrat:400,700);
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Eczar', serif;
+}
